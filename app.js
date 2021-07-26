@@ -35,16 +35,16 @@ router.post("/",async(req ,res)=>
                res.render('index',{temp:null,name:'city not found',wind:null,clouds:null,humidity:null,imgURL:null,date:null,weather:null,max:null,min:null});
            }
     else{
-           const name = data.name;
-           const temp = data.main.temp+"°";
-           const weather = data.weather[0].description;
-           const icon = data.weather[0].icon;
-           const imgURL = "http://openweathermap.org/img/wn/"+icon+"@2x.png";
-           const wind = data.wind.speed+" km/hr";
-           const humidity = data.main.humidity+"%";
-           const clouds = data.clouds.all+"%";
-           const max = data.main.temp_max+"°" ;
-           const min = data.main.temp_min+"°";
+           var temp = data.main.temp+"°";
+           var weather = data.weather[0].description;
+           var name = data.name;
+           var icon = data.weather[0].icon;
+           var imgURL = "http://openweathermap.org/img/wn/"+icon+"@2x.png";
+           var wind = data.wind.speed+" km/hr";
+           var humidity = data.main.humidity+"%";
+           var clouds = data.clouds.all+"%";
+           var max = data.main.temp_max+"°" ;
+           var min = data.main.temp_min+"°";
            var today = new Date();
            var month = today.getMonth();
            var currmon="";
