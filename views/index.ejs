@@ -32,9 +32,9 @@
     </div>
     <div class="description2">
         <ul style="list-style-type:none;">
-            <li><%= clouds%></li>
-            <li><%= humidity%></li>
-            <li><%= wind%></li>
+            <li><%=clouds%></li>
+            <li><%=humidity%></li>
+            <li><%=wind%></li>
         </ul>
     </div>
 </div>
@@ -49,7 +49,7 @@
     <div class="description2">
         <ul style="list-style-type:none;">
 
-            <li><%= min%></li>
+            <li><%=min%></li>
             <li><%=max%></li>
         </ul>
     </div>
@@ -62,9 +62,9 @@
         <%=temp%>
 </span> 
 <span class="cityname"><%=name %></span>
-<img  class="image" src=<%= imgURL%> ><br>
+<img  class="image" src=<%=imgURL%> ><br>
 <span class="desc"><%= date %></span>
-<span class="weather" style="margin-left:40px;"><%= weather %></span>
+<span class="weather" style="margin-left:40px;"><%=weather%></span>
 </div>
 </body>
 </html>
