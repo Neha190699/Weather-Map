@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    
+  }
+  
+.bg
+{
+    width: 100%;
+    position:relative;
+}
+.container
+{
+    position:absolute;
+    left: 80px;
+    top:100px;
+    width: 350px;
+    height:500px;
+    padding: 16px;
+}
+.userinput
+{
+    width:250px;
+    height:50px;
+    outline: none;
+    border:none;
+    border-radius: 20px;
+} 
+.btn
+{
+    color: white;
+    padding: 10px 30px;
+    border-radius:20px;
+}
+.container2
+{
+    position:absolute;
+    opacity:0.6;
+    right:0px;
+    top:0.1px;
+    height:850px;
+    width:500px;
+    background-color:rgba(19, 1, 1);
+   
+}
+.container2 p
+{
+    color:white;
+    text-decoration: solid;
+    font-family: 'Montserrat', sans-serif;
+    margin-top:60px;
+    margin-left:60px;
+    font-size:20px;
+   margin-bottom:30px;
+
+}
+.container2 hr
+{
+    color:white;
+    margin-left:60px;
+    margin-right:60px;
+    margin-top:20px;
+    height:2px;
+   
+}
+.containerBottom
+{
+    position: absolute;
+    bottom:30px;
+    height:30%;
+    width:50%;
+    left: 80px;
+}
+.temp
+{
+    font-size:80px;
+    color:white;
+    text-decoration: solid;
+}
+.cityname
+{
+    font-size:40px;
+    color:white;
+    text-decoration: solid;
+}
+.image
+{
+    margin-left:25px;
+}
+.desc , .weather
+{
+    margin-left:28%;
+    font-size:20px;
+    text-decoration: solid;
+    line-height: 5px;
+    color:white;
+    position:relative; /*changes position of a element relative to its position .top and left are negative*/
+    top:-20px;
+}
+.description, .description2
+{
+    list-style-type:none;
+    margin-top:40px;
+    margin-left:30px;
+    color:white;
+    font-size:20px; 
+}
+.description li
+{
+    padding-top:40px;
+}
+.description2 li
+{
+    padding-top:40px;
+    margin-left:80px;
+  
+}
+.descContainer{ 
+    width: 100%;
+    display: flex;
+}
+@media (max-width: 600px) {
+    .container2 {
+      width: 100%;
+      position:relative;
+      padding-top:20px;
+    }
+    .desc,.weather
+    {
+     display:none;
+    }
+    .image{
+        position:absolute;
+        top:15px;
+        left:80%;
+       
+    }
+  }
+    
+
+
+
+
