@@ -32,7 +32,7 @@ router.post("/",async(req ,res)=>
        .then(data => {
            if(data.message === 'city not found' )
            {
-               res.render('index',{temp:null,name:'city not found',wind:null,clouds:null,humidity:null,imgURL:null,date:null,weather:null,max:null,min:null});
+               res.render('index',{temp:null,name:'city not found',imgURL:null,date:null,weather:null,wind:null,humidity:null,clouds:null,max:null,min:null});
            }
     else{
            var temp = data.main.temp+"°";
