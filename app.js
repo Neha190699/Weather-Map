@@ -11,6 +11,22 @@ app.set('view engine', 'ejs');
 app.use(express.static("public"));
 app.use('/*', router);
 
+var temp ;
+var weather;
+var name;
+var icon;
+var imgURL;
+var wind;
+var humidity;
+var clouds;
+var  max ;
+var  min ;
+var today;
+var month;
+var currmon;
+var time;
+var date;
+
 
 router.get('/' , function(req, res)
 {
@@ -35,19 +51,19 @@ router.post("/",async(req ,res)=>
                res.render('index',{temp:null,name:'city not found',wind:null,clouds:null,humidity:null,imgURL:null,date:null,weather:null,max:null,min:null});
            }
     else{
-           const name = data.name;
-           const temp = data.main.temp+"°";
-           const weather = data.weather[0].description;
-           const icon = data.weather[0].icon;
-           const imgURL = "http://openweathermap.org/img/wn/"+icon+"@2x.png";
-           const wind = data.wind.speed+" km/hr";
-           const humidity = data.main.humidity+"%";
-           const clouds = data.clouds.all+"%";
-           const max = data.main.temp_max+"°" ;
-           const min = data.main.temp_min+"°";
-           var today = new Date();
-           var month = today.getMonth();
-           var currmon="";
+           name = data.name;
+           temp = data.main.temp+"°";
+           weather = data.weather[0].description;
+           icon = data.weather[0].icon;
+           imgURL = "http://openweathermap.org/img/wn/"+icon+"@2x.png";
+           wind = data.wind.speed+" km/hr";
+           humidity = data.main.humidity+"%";
+           clouds = data.clouds.all+"%";
+           max = data.main.temp_max+"°" ;
+           min = data.main.temp_min+"°";
+           today = new Date();
+           month = today.getMonth();
+    
            switch(month)
            {
             case 0:currmon="Jan";
@@ -75,8 +91,8 @@ router.post("/",async(req ,res)=>
             case 11:currmon="Dec";
                         break;
            }
-           var time = today.getHours()+":"+today.getMinutes()+", ";
-           var date = time + today.getDate()+"."+currmon+"."+today.getFullYear();
+            time = today.getHours()+":"+today.getMinutes()+", ";
+            date = time + today.getDate()+"."+currmon+"."+today.getFullYear();
            res.render('index',{temp:temp,name:name,imgURL:imgURL,date:date,weather:weather,wind:wind,humidity:humidity,clouds:clouds,max:max,min:min});
        }
        
