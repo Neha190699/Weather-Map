@@ -77,7 +77,7 @@ router.post("/",async(req ,res)=>
            }
            var time = today.getHours()+":"+today.getMinutes()+", ";
            var date = time + today.getDate()+"."+currmon+"."+today.getFullYear();
-           res.render('index',{temp,name,imgURL,date,weather,wind,humidity,clouds,max,min});
+           res.render('index',{temp:temp,name:name,imgURL:imgURL,date:date,weather:weather,wind:wind,humidity:humidity,clouds:clouds,max:max,min:min});
        }
        
      })
