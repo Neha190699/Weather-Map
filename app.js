@@ -26,6 +26,10 @@ var month;
 var currmon;
 var time;
 var date;
+<<<<<<< HEAD
+=======
+
+>>>>>>> e9f2a083a00b625a741b8d2c7f95accdbadef3b9
 
 router.get('/' , function(req, res)
 {
@@ -50,6 +54,7 @@ router.post("/",async(req ,res)=>
                res.render('index',{temp:null,name:'city not found',imgURL:null,date:null,weather:null,wind:null,humidity:null,clouds:null,max:null,min:null});
            }
     else{
+<<<<<<< HEAD
             temp = data.main.temp+"°";
             weather = data.weather[0].description;
             name = data.name;
@@ -63,6 +68,21 @@ router.post("/",async(req ,res)=>
             today = new Date();
             month = today.getMonth();
             currmon="";
+=======
+           name = data.name;
+           temp = data.main.temp+"°";
+           weather = data.weather[0].description;
+           icon = data.weather[0].icon;
+           imgURL = "http://openweathermap.org/img/wn/"+icon+"@2x.png";
+           wind = data.wind.speed+" km/hr";
+           humidity = data.main.humidity+"%";
+           clouds = data.clouds.all+"%";
+           max = data.main.temp_max+"°" ;
+           min = data.main.temp_min+"°";
+           today = new Date();
+           month = today.getMonth();
+    
+>>>>>>> e9f2a083a00b625a741b8d2c7f95accdbadef3b9
            switch(month)
            {
             case 0:currmon="Jan";
